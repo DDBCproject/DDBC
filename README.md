@@ -24,6 +24,15 @@ DDBC Research
 
 The research is currently being compiled here https://docs.google.com/document/d/1y2J9U27uiFIUZ9RXM2Q54TX0q8ruQzgT5X1j0YPXRws/edit
 
+-------
+Some of our findings are viewable here:
+
+https://github.com/DDBCpoject/DDBC/tree/master/mftm-database/data/csv
+
+Here for example is the famous BitLen ASCII tribute: 
+
+---BEGIN TRIBUTE--- #./BitLen           ::::::::::::::::::: :::::::.::.::.:.::: :.: :.' ' ' ' ' : : :.:'' ,,xiW,"4x, '' :  ,dWWWXXXXi,4WX,  ' dWWWXXX7"     `X,  lWWWXX7   __   _ X :WWWXX7 ,xXX7' "^^X lWWWX7, _.+,, _.+., :WWW7,. `^"-" ,^-'   WW",X:        X,    "7^^Xl.    _(_x7'   l ( :X:       __ _  `. " XX  ,xxWWWWX7   )X- "" 4X" .___.  ,W X     :Xi  _,,_  WW X      4XiyXWWXd "" ,,      4XWWWWXX , R7X,       "^447^ R, "4RXk,      _, , TWk  "4RXXi,   X',x lTWk,  "4RRR7' 4 XH :lWWWk,  ^"     `4  ::TTXWWi,_  Xll :.. =-=-=-=-=-=-=-=-=-= LEN "rabbi" SASSAMA      1980-2011      Len was our friend. A brilliant mind,   a kind soul, and    a devious schemer;  husband to Meredith brother to Calvin,  son to Jim and      Dana Hartshorn,     coauthor and        cofounder and       Shmoo and so much   more.  We dedicate  this silly hack to  Len, who would have found it absolutely hilarious.          --Dan Kaminsky,     Travis Goodspeed    P.S.  My apologies, BitCoin people.  He also would have     LOL'd at BitCoin's  new dependency upon    ASCII BERNANKE   :'::.:::::.:::.::.: : :.: ' ' ' ' : :': :.:     _.__    '.: :   _,^"   "^x,   : '  x7'        `4,    ¬¥^             ^^  XX7            4XX  XX              XX  Xl ,xxx,   ,xxx,XX ( ' _,+o, | ,o+,"    4   "-^' X "^-'" 7  l,     ( ))     ,X  :Xx,_ ,xXXXxx,_,XX   4XXiX'-___-`XXXX'    4XXi,_   _iXX7'    , `4XXXXXXXXX^ _,   Xx,  ""^^^XX7,xX  W,"4WWx,_ _,XxWWX7' Xwi, "4WW7""4WW7',W TXXWw, ^7 Xk 47 ,WH :TXXXWw,_ "), ,wWT: ::TTXXWWW lXl WWT:  ----END TRIBUTE---- 
+
 
 The project is currently in development so we are not providing installation instructions yet 
 
