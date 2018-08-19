@@ -17,13 +17,15 @@ Two workshops with groups from Cambridge will train participants to use the onli
 DDBC Exhibition
 The exhibition is a public workspace where visitors can look at the contents of the blockchain as a series of projections and printed material. The current concept is to use four 4k projectors to display a selection of the texts snippets and recognisable images discovered by the researchers - these are displayed within different categories of content. These projections will change dynamically over time and as new material is added. 
 
+DDBC Research
+The research is currently being compiled here https://docs.google.com/document/d/1y2J9U27uiFIUZ9RXM2Q54TX0q8ruQzgT5X1j0YPXRws/edit
+
+
+The project is currently in development so we are not providing installation instructions yet 
+
+------------
 
 The DDBC project builds on:
 
 Messages from the Mines https://brangerbriz.com/portfolio/messages-from-the-mines
 Python Blockchain Parser https://github.com/alecalve/python-bitcoin-blockchain-parser
-
-
-The project is currently in development so we are not providing installation instructions yet 
-
-
