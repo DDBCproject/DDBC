@@ -4,6 +4,8 @@
 
 - DDBC, 2018
 
+
+
 People around the world are committing their marriage vows, memorials to the dead, treasured images and promotional material into cryptocurrency blockchains because they promise to be permanent and immutable records for the future. DDBC is a research project that explores blockchains not as financial records but as social and cultural artefacts. Like the Domesday Book which catalogued life in the 11th century and became an important document for historians, the DDBC is a platform for analysing life in the 21st century. It has three components. The DDBC online application allows people to explore, tag, rate and categorise material from the blockchains. In return, participants will receive DDBC coin for entering annotations. The DDBC exhibition is a workspace where people can view other people’s finds and add their own comments. The DDBC workshops will train people to use the application and help them understand how they can contribute to the future of blockchains.
 
 DDBC online application and DDBC coin
@@ -18,8 +20,9 @@ The exhibition is a public workspace where visitors can look at the contents of 
 
 
 
-The DDBC project builds on Messages from the Mines https://brangerbriz.com/portfolio/messages-from-the-mines
-
+The DDBC project builds on:
+Messages from the Mines https://brangerbriz.com/portfolio/messages-from-the-mines
+Python Blockchain Parser https://github.com/alecalve/python-bitcoin-blockchain-parser
 
 ## Install
 
@@ -105,8 +108,3 @@ cp mftm-backend/www/auth.js mftm-backend/www/mftm-frontend/js/auth.js
 firefox mftm-backend/www/mftm-frontend/index.html
 ```
 
-Sorry folks, that's just the way it goes sometimes.
-
-## More Info
-
-![Messages from the Mines Banner/Poster](.images/banner.png)
