@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Messages from the Mines</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- TODO meta tags + social cards -->
+    </head>
+    <body>
+
+        <div id="minedBlock"></div>
+
+        <div id="hiddenBtn"></div>
+        <div id="hiddenMenu">
+            <div id="buttons">
+                <span id="restart"> restart project </span>
+                <span id="nsfwToggle"> show nsfw </span>
+                <span id="testNewBlock">test new block</span>
+                <span id="close"> X </span>
+            </div>
+            <div id="consoleDump"></div>
+        </div>
+
+        <div id="gui">
+            <nav-arrow :data-bc="blockchain" :data-cam="camera"
+                        data-type="left" ref="leftArrow"></nav-arrow>
+            <nav-arrow :data-bc="blockchain" :data-cam="camera"
+                        data-type="right" ref="rightArrow"></nav-arrow>
+            <block-info :data-bc="blockchain" :data-cam="camera" ref="nfo"></block-info>
+            <trans-msgs :data-bc="blockchain" ref="tx"></trans-msgs>
+            <control-area :data-bc="blockchain" ref="cntrl"></control-area>
+        </div>
+
+        <script src="js/libs/socket.io.js"></script>
+        <script src="js/libs/tween.min.js"></script>
+        <script src="js/libs/three.min.js"></script>
+        <script src="js/libs/vue.js"></script>
+        <script src="js/vue-components/nav-arrow.js"></script>
+        <script src="js/vue-components/block-info.js"></script>
+        <script src="js/vue-components/trans-msgs.js"></script>
+        <script src="js/vue-components/control-area.js"></script>
+        <script src="js/Block.js"></script>
+        <script src="js/Blockchain.js"></script>
+        <script src="js/BlockMined.js"></script>
+        <script src="js/auth.js"></script>
+        <script src="js/debug-menu.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

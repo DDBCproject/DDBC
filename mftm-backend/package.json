@@ -1,0 +1,25 @@
+{
+  "name": "mftm-backend",
+  "version": "1.0.0",
+  "description": "Messages from the Mines backend Node.js server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brannon Dorsey <brannon@brannondorsey.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bindings": "^1.3.0",
+    "bitcoin": "^3.0.1",
+    "cjs": "0.0.11",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-basic-auth": "^1.1.5",
+    "mysql": "^2.15.0",
+    "node-gyp": "^3.7.0",
+    "socket.io": "^2.1.1",
+    "underscore": "^1.9.1",
+    "zeromq": "^4.6.0",
+    "zmq": "^2.15.3"
+  }
+}

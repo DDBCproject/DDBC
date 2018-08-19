@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blockchain Messages Review</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+
+		body {
+			font-family: 'Work Sans', 'Ubuntu', 'Sans Serif';
+			font-weight: 400;
+			width: 960px;
+			margin: auto;
+			margin-top: 25px;
+			font-size: 10pt;
+		}
+
+		h2 {
+			text-align: center;
+			font-weight: 400;
+		}
+
+		#query-form, #results {
+			text-align: center;
+		}
+
+		#data {
+			width: 100%;
+			height: 250px;
+		}
+
+		select, textarea, input {
+			margin-bottom: 15px;
+		}
+
+		#results {
+			margin-top: 40px;
+			text-align: left;
+		}
+
+		#next-button, #prev-button {
+			float: right;
+		}
+
+		#prev-button {
+			float: left;
+		}
+
+		#all-valid {
+			text-align: center;
+			display: block;
+			margin: auto;
+		}
+
+		.result {
+			padding-top: 10px;
+			border-bottom: 1px solid black;
+			cursor: pointer;
+		}
+
+		.result:last-child {
+			border-bottom: none;
+		}
+
+		.result-info, .line-item {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			color: gray;
+		}
+
+		.result-info textarea {
+			width: 100%;
+		}
+
+	</style>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+<h2>Query</h2>
+<form id="query-form" method="GET" action="">
+	
+	Table: 
+	<select v-model="filter.table" name="query-table"> 
+	  	<option value="coinbase_messages">Coinbase Messages</option> 
+	  	<option value="address_messages">Address Messages</option>
+	  	<option value="op_return_address_messages">OP_RETURN Address Messages</option>
+	</select><br>
+
+	Reviewed: 
+	<input id="query-reviewed-all" type="radio" name="query-reviewed" v-model="filter.reviewed" v-bind:value="undefined" value="null">
+	<label for="query-reviewed-all">All</label>
+	<input id="query-reviewed-no" type="radio" name="query-reviewed" v-model="filter.reviewed" v-bind:value="false">
+	<label for="query-reviewed-no">No</label>
+	<input id="query-reviewed-yes" type="radio" name="query-reviewed" v-model="filter.reviewed" v-bind:value="true">
+	<label for="query-reviewed-yes">Yes</label>
+	<br>
+
+	Valid: 
+	<input id="query-valid-all" type="radio" name="query-valid" v-model="filter.valid" v-bind:value="undefined" selected>
+	<label for="query-valid-all">All</label>
+	<input id="query-valid-no" type="radio" name="query-valid" v-model="filter.valid" v-bind:value="false">
+	<label for="query-valid-no">No</label>
+	<input id="query-valid-yes" type="radio" name="query-valid" v-model="filter.valid" v-bind:value="true">
+	<label for="query-valid-yes">Yes</label>
+	<br>
+
+	Bookmarked: 
+	<input id="query-bookmarked-all" type="radio" name="query-bookmarked" v-model="filter.bookmarked" value="undefined" selected>
+	<label for="query-bookmarked-all">All</label>
+	<input id="query-bookmarked-no" type="radio" name="query-bookmarked" v-model="filter.bookmarked" value="false">
+	<label for="query-bookmarked-no">No</label>
+	<input id="query-bookmarked-yes" type="radio" name="query-bookmarked" v-model="filter.bookmarked" value="true">
+	<label for="query-bookmarked-yes">Yes</label>
+	<br>
+
+	Annotated: 
+	<input id="query-annotated-all" type="radio" name="query-annotated" v-model="filter.annotated" value="undefined" selected>
+	<label for="query-annotated-all">All</label>
+	<input id="query-annotated-no" type="radio" name="query-annotated" v-model="filter.annotated" value="false">
+	<label for="query-annotated-no">No</label>
+	<input id="query-annotated-yes" type="radio" name="query-annotated" v-model="filter.annotated" value="true">
+	<label for="query-annotated-yes">Yes</label>
+	<br>
+
+	NSFW: 
+	<input id="query-nsfw-all" type="radio" name="query-nsfw" v-model="filter.nsfw" value="undefined" selected>
+	<label for="query-nsfw-all">All</label>
+	<input id="query-nsfw-no" type="radio" name="query-nsfw" v-model="filter.nsfw" value="false">
+	<label for="query-nsfw-no">No</label>
+	<input id="query-nsfw-yes" type="radio" name="query-nsfw" v-model="filter.nsfw" value="true">
+	<label for="query-nsfw-yes">Yes</label>
+	<br>
+
+	TX: <input type="text" v-model="filter.transaction">
+	<br>
+
+	Unique Messages: <input type="checkbox" v-model="filter.unique">
+	<br>
+	<br>
+
+	Tags: <input type="text" v-model="filter.tags">
+	<br>
+
+	Search: <input type="text" v-model="filter.search">
+	<br>
+
+	Offset: <input type="number" v-model="filter.offset">
+
+	<br>
+	<button id="filter-button" type="button">Search</button>
+	<br>
+	<br>
+	Autoreview: <input type="checkbox" v-model="autoreview"></input>
+
+	<div id="results-count">{{ commaFormatNumber(progressCount) }} / {{ commaFormatNumber(resultsCount) }} results</div>
+
+</form>
+<div>
+	<button id="next-button" type="button">Next</button>
+	<button id="prev-button" type="button">Previous</button>
+</div>
+
+<div id="results">
+	<div v-for="result in results" class="result">
+		<pre class="data">{{ result.displayData }}</pre>
+		<div class="result-info">
+			<div>
+				{{ moment(result.block_timestamp).format('MMM Do YYYY, h:mm A') }}
+				<span v-if="result.count">&nbsp; {{ commaFormatNumber(result.count) }} time{{ result.count > 1 ? 's' : '' }} &nbsp; |</span>
+				&nbsp;
+
+				valid: <input type="checkbox" v-model="result.valid" name='valid' @change="updateRecord('valid', result)"> &nbsp; 
+				bookmarked: <input type="checkbox" v-model="result.bookmarked" @change="updateRecord('bookmarked', result)"> &nbsp;
+				nsfw: <input type="checkbox" v-model="result.nsfw" @change="updateRecord('nsfw', result)"> &nbsp;
+				reviewed: <input type="checkbox" v-model="result.reviewed" @change="updateRecord('reviewed', result)"> &nbsp;
+				<span v-if="typeof result.format !== 'undefined'">format: <input type="checkbox" v-model="result.format" @change="formatUTF8(result); updateRecord('format', result);"> &nbsp;</span>
+				<span v-on:click="result.expanded = !result.expanded">...</span>
+				<div>tags: <input type="text" v-model='result.tags' @change="updateRecord('tags', result)"></div>
+			</div>
+			<div v-show="result.expanded">
+				<div class="line-item">block: <a :href='"https://blockchain.info/block-height/" + result.block_height' target='_blank'>{{ result.block_height }} </a></div>
+				<div class="line-item">tx: <a :href='"https://blockchain.info/tx/" + result.transaction_hash' target='_blank'> {{ result.transaction_hash }} </a></div>
+				<textarea v-model="result.annotation" @change="updateRecord('annotation', result)"></textarea>
+			</div>
+		</div>
+	</div>
+</div>
+
+<button id="all-valid" type="button" v-on:click="allValid()">All valid</button>
+
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.1/qs.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="../auth.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
