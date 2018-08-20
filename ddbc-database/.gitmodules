@@ -1,0 +1,3 @@
+[submodule "lib/python-bitcoin-blockchain-parser"]
+	path = lib/python-bitcoin-blockchain-parser
+	url = https://github.com/brangerbriz/python-bitcoin-blockchain-parser

@@ -1,0 +1,3 @@
+[submodule "www/ddbc-frontend"]
+	path = www/ddbc-frontend
+	url = https://github.com/brangerbriz/ddbc-frontend.git
