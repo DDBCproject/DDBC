@@ -61,7 +61,13 @@ This is needed to allow users to view, annotate and rate the content in the bloc
 ------------
 
 The DDBC project builds on:
+<<<<<<< HEAD
 
 Messages from the Mines https://brangerbriz.com/portfolio/messages-from-the-mines
 Python Blockchain Parser https://github.com/alecalve/python-bitcoin-blockchain-parser
 
+=======
+
+Messages from the Mines https://brangerbriz.com/portfolio/messages-from-the-mines
+Python Blockchain Parser https://github.com/alecalve/python-bitcoin-blockchain-parser
+>>>>>>> e89c80c63d4433e6d3e9f22012bdcad442f61c80
