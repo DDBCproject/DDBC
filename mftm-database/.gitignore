@@ -1,8 +1,0 @@
-venv/
-data/csv/*
-!data/csv/.gitkeep
-data/blockchain-files
-*.pyc
-sql/backups/*
-!sql/backups/.gitkeep
-config.json
