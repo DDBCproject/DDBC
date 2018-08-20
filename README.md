@@ -25,16 +25,38 @@ DDBC Research
 The research is currently being compiled here https://docs.google.com/document/d/1y2J9U27uiFIUZ9RXM2Q54TX0q8ruQzgT5X1j0YPXRws/edit
 
 -------
-Some of our findings are viewable here:
 
-https://github.com/DDBCpoject/DDBC/tree/master/mftm-database/data/csv
+The project is currently in development and we have the following issues:
 
-Here for example is the famous BitLen ASCII tribute: 
+1 Multi transaction parsing. 
 
----BEGIN TRIBUTE--- #./BitLen           ::::::::::::::::::: :::::::.::.::.:.::: :.: :.' ' ' ' ' : : :.:'' ,,xiW,"4x, '' :  ,dWWWXXXXi,4WX,  ' dWWWXXX7"     `X,  lWWWXX7   __   _ X :WWWXX7 ,xXX7' "^^X lWWWX7, _.+,, _.+., :WWW7,. `^"-" ,^-'   WW",X:        X,    "7^^Xl.    _(_x7'   l ( :X:       __ _  `. " XX  ,xxWWWWX7   )X- "" 4X" .___.  ,W X     :Xi  _,,_  WW X      4XiyXWWXd "" ,,      4XWWWWXX , R7X,       "^447^ R, "4RXk,      _, , TWk  "4RXXi,   X',x lTWk,  "4RRR7' 4 XH :lWWWk,  ^"     `4  ::TTXWWi,_  Xll :.. =-=-=-=-=-=-=-=-=-= LEN "rabbi" SASSAMA      1980-2011      Len was our friend. A brilliant mind,   a kind soul, and    a devious schemer;  husband to Meredith brother to Calvin,  son to Jim and      Dana Hartshorn,     coauthor and        cofounder and       Shmoo and so much   more.  We dedicate  this silly hack to  Len, who would have found it absolutely hilarious.          --Dan Kaminsky,     Travis Goodspeed    P.S.  My apologies, BitCoin people.  He also would have     LOL'd at BitCoin's  new dependency upon    ASCII BERNANKE   :'::.:::::.:::.::.: : :.: ' ' ' ' : :': :.:     _.__    '.: :   _,^"   "^x,   : '  x7'        `4,    ¬¥^             ^^  XX7            4XX  XX              XX  Xl ,xxx,   ,xxx,XX ( ' _,+o, | ,o+,"    4   "-^' X "^-'" 7  l,     ( ))     ,X  :Xx,_ ,xXXXxx,_,XX   4XXiX'-___-`XXXX'    4XXi,_   _iXX7'    , `4XXXXXXXXX^ _,   Xx,  ""^^^XX7,xX  W,"4WWx,_ _,XxWWX7' Xwi, "4WW7""4WW7',W TXXWw, ^7 Xk 47 ,WH :TXXXWw,_ "), ,wWT: ::TTXXWWW lXl WWT:  ----END TRIBUTE---- 
+We only found 29 images (jpgs, pngs and gif) that we can successfully decode. These are stored in:
+
+https://github.com/DDBCpoject/DDBC/blob/master/mftm-database/data/csv/utf8_a.tar.gz
+
+We think the problem is that the parser is currently only looking for an image headers and footers within a single transaction. While actually most of the images are being stored across multiple consecutive transaction. So, we need to implement a system hat can identify these multiple transaction insertions and put them together.
 
 
-The project is currently in development so we are not providing installation instructions yet 
+2 Hex to ASCII decoding of CSV files. 
+
+The text insertions we have found are stored in the CSV files here:
+
+https://github.com/DDBCpoject/DDBC/blob/master/mftm-database/data/csv/
+
+The insertions are in the 'data' field of the CSV files but each one is hex encoded. We need a little script that decodes this field into ascii.
+
+ 
+3 Implement missing detection methods.
+
+We need to fully implement the 5 detection methods outlined in this paper: 
+
+https://www.comsys.rwth-aachen.de/fileadmin/papers/2018/2018_matzutt_bitcoin-contents_preproceedings-version.pdf
+
+
+4 Build an 'Instagram' Clone Frontend for the data
+
+This is needed to allow users to view, annotate and rate the content in the blockchain. There are many python instagram clones out there. These need to be investigated and tested. 
+
 
 ------------
 
