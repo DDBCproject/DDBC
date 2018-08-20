@@ -32,7 +32,7 @@ The project is currently in development and we have the following issues:
 
 We only found 29 images (jpgs, pngs and gif) that we can successfully decode. These are stored in:
 
-https://github.com/DDBCpoject/DDBC/blob/master/mftm-database/data/csv/utf8_a.tar.gz
+https://github.com/DDBCpoject/DDBC/blob/master/ddbc-database/data/csv/utf8_a.tar.gz
 
 We think the problem is that the parser is currently only looking for an image headers and footers within a single transaction. While actually most of the images are being stored across multiple consecutive transaction. So, we need to implement a system hat can identify these multiple transaction insertions and put them together.
 
@@ -41,7 +41,7 @@ We think the problem is that the parser is currently only looking for an image h
 
 The text insertions we have found are stored in the CSV files here:
 
-https://github.com/DDBCpoject/DDBC/blob/master/mftm-database/data/csv/
+https://github.com/DDBCpoject/DDBC/blob/master/ddbc-database/data/csv/
 
 The insertions are in the 'data' field of the CSV files but each one is hex encoded. We need a little script that decodes this field into ascii.
 
