@@ -26,17 +26,6 @@ The research is currently being compiled here https://docs.google.com/document/d
 
 -------
 
-Our currect software analyses a blockchain using python parser. 
-
-The parser can then scan each and every Bitcoin transaction provided a full local blockchain copy (make sure to use "txindex=1" in your bitcoin.conf just to be sure you have everything).
-
-Each transaction is checked for the distinguished feature vector of each identified insertion method. Examples are: Does the transaction
-involve an OP_RETURN output script? Are there unspent standard output scripts whose hash values consist of >= 90% printable ASCII characters?
-
-Finally, the probably most relevant detectors are the service-based content detectors. These work similar to the other detectors, but here we usually read in the whole potential payload, check it for the distinguishing features of the different content insertion services reported in our paper, and extract the file according to the insertion service's protocol. For instance, before uploading a file to the blockchain the Satoshi Uploader adds the file's length and a CRC32 checksum as a header [2]. By checking the consistency of such features we can be pretty sure that the detector found a file and we can be certain if we can extract the alleged file and view it using standard software. In addition to our "suspicious transaction" detector, which heuristically flags transactions with many unspent outputs of very small value.
-
--------
-
 The project is currently in development and we have the following issues:
 
 1 Multi-transaction parsing. 
