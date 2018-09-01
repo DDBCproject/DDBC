@@ -26,7 +26,7 @@ The research is currently being compiled here https://docs.google.com/document/d
 
 -------
 
-The project is currently in development and we have the following issues:
+The project is currently in development and we need help with the following issues:
 
 1 Multi-transaction parsing. 
 
