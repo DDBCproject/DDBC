@@ -10,8 +10,6 @@ DDBC online application and DDBC coin
 
 We will develop an online application that allows people to become blockchain researchers. They can discover material embedded within the blockchains, tag it, rate it and categorise into a folksonomy such as: Memorials, Love, Greetings, Encrypted, Non-English, Philosophy, Historic, Hello-World, URL, Adverts, Public Shoutout, Ascii Art, SHA1, Cats, Insults and Art. There are currently over 501628 Bitcoin blocks to navigate and explore. Each block may contain a lot of information to unpack filter and review. Part of our research involves mapping out where we expect material could exist and what forms this may take. We will record the info about the development process and pointers to this media within our own blockchain call the DDBC coin. Unlike Bitcoin, DDBC coin won’t require heavy processing as we just want to hold a log blockchain discoveries and review them in context with one another. App users will be rewarded for their activity with DDBC coin that is stored within their own wallet. By issuing wallets and inviting the public to participate in the research process they will share in the monumental task of exploration and annotation. We are currently discussing further uses for the DDBC coin such as linking to other citizen science projects that want to reward participants.
 
-Read more about the ongoing research process in the [wiki](https://github.com/DDBCproject/DDBC/wiki).
-
 DDBC Workshops
 
 Two workshops with groups from Cambridge will train participants to use the online application, receive DDBC coins, experience blockchain technologies and discus broader implications of its use as well as write ‘themselves’ into public blockchains. 
@@ -22,8 +20,8 @@ DDBC Exhibition
 The exhibition is a public workspace where visitors can look at the contents of the blockchain as a series of projections and printed material. The current concept is to use four 4k projectors to display a selection of the texts snippets and recognisable images discovered by the researchers - these are displayed within different categories of content. These projections will change dynamically over time and as new material is added. 
 
 DDBC Research
-
-The research is currently being compiled here https://docs.google.com/document/d/1y2J9U27uiFIUZ9RXM2Q54TX0q8ruQzgT5X1j0YPXRws/edit
+Read more about the ongoing research process in the [wiki](https://github.com/DDBCproject/DDBC/wiki).
+The research reportes are here https://docs.google.com/document/d/1y2J9U27uiFIUZ9RXM2Q54TX0q8ruQzgT5X1j0YPXRws/edit
 
 -------
 
