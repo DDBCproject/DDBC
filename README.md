@@ -61,6 +61,7 @@ This is needed to allow users to view, annotate and rate the content in the bloc
 
 The DDBC project builds on:
 
+BlockSci https://github.com/citp/BlockSci
 
 Messages from the Mines https://brangerbriz.com/portfolio/messages-from-the-mines
 
