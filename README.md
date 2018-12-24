@@ -24,8 +24,9 @@ An array of data monitors, projected screens and printed reports will be display
 layers of the texts verses and rants will be collaged with visualisations of research discoveriess - in turn these are displayed in different categories. Presentations of discovered artefacts will change dynamically over time and be updated as new material is uncovered. 
 
 DDBC Research
-Read more about the ongoing research process in the [wiki](https://github.com/DDBCproject/DDBC/wiki).
-The research reportes are here https://docs.google.com/document/d/1y2J9U27uiFIUZ9RXM2Q54TX0q8ruQzgT5X1j0YPXRws/edit
+Read more about the ongoing research process in the [WIKI](https://github.com/DDBCproject/DDBC/wiki "WIKI").
+
+The research reportes are published [here] (https://docs.google.com/document/d/1y2J9U27uiFIUZ9RXM2Q54TX0q8ruQzgT5X1j0YPXRws/edit)
 
 -------
 
