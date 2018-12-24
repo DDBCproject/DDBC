@@ -26,7 +26,7 @@ layers of the texts verses and rants will be collaged with visualisations of res
 DDBC Research
 Read more about the ongoing research process in the [WIKI](https://github.com/DDBCproject/DDBC/wiki "WIKI").
 
-The research reportes are published [here](https://docs.google.com/document/d/1y2J9U27uiFIUZ9RXM2Q54TX0q8ruQzgT5X1j0YPXRws/edit)
+The research reports are published [here](https://docs.google.com/document/d/1y2J9U27uiFIUZ9RXM2Q54TX0q8ruQzgT5X1j0YPXRws/edit)
 
 -------
 
