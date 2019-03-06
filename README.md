@@ -3,7 +3,7 @@
 “How will the 21st century be remembered? Beyond the financial hype, people around the world are embedding messages and memorials in blockchains to preserve them forever. Like the Domesday Book, the Doomsday Blockchain carries out a systematic survey that treats this data as a historical and cultural medium. We are are excited to work with Collusion to create a system that allows people to participate in turning these technologies into a public medium for us all.”  
 
 - DDBC, 2018-19 (see [WIKI](https://github.com/DDBCproject/DDBC/wiki "WIKI"))
-- DDBC [Projects](https://github.com/DDBCproject/DDBC/projects)
+- Review DDBC [Projects](https://github.com/DDBCproject/DDBC/projects) in progress.
 
 People around the world are committing their marriage vows, memorials to the dead, treasured images and promotional material into cryptocurrency blockchains because they promise to be permanent and immutable records for the future. DDBC is a research project that explores blockchains not as financial records but as social and cultural artefacts. Like the Domesday Book which catalogued life in the 11th century and became an important document for historians, the DDBC is a platform for analysing life in the 21st century. It has three components. The DDBC online application allows people to explore, tag, rate and categorise material from the blockchains. In return, participants will receive DDBC coin for entering annotations. The DDBC exhibition is a workspace where people can view other people’s finds and add their own comments. The DDBC workshops will train people to use the application and help them understand how they can contribute to the future of blockchains.
 
